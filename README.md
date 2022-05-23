@@ -1,3 +1,24 @@
+# XCCDF Validation Action
+
+Example usage:
+
+```yml
+on: [push]
+
+jobs:
+  xccdf-validate:
+    runs-on: ubuntu-latest
+    name: Validate XCCDF
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Validate XCCDF File
+        uses: mitre/xccdf-validate-action@v1
+        with: 
+          input: sample_data/xccdf-results-openscap-rhel7.xml
+```
+
+---
 
 ### NOTICE
 
