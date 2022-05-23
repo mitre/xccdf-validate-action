@@ -1,0 +1,11 @@
+name: 'XCCDF Schema Validation Tool'
+description: 'Validate an XCCDF file'
+inputs:
+  path:
+    description: 'The path to your XCCDF input file relative to your working directory'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.input }}
